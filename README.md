@@ -8,3 +8,5 @@
 - This project is still in works.
 - Would love to chat more about this.
 
+## What next to implement?
+- The next thing I want to do is to make a way to uplaod inline images or media files in the markdown.
