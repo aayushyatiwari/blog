@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load markdown_extras %}
+
+{% block title %}{{ post.title }} | aayush's blog{% endblock %}
+
+{% block content %}
+<article>
+  <h1>{{ post.title }}</h1>
+  <p><em>{{ post.date }}</em></p>
+
+  <div class="post-content">
+    {{ post.content| markdown | safe }}
+  </div>
+</article>
+
+<hr>
+
+<p><a href="/">← Back to home</a></p>
+{% endblock %}
