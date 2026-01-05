@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 def home(request):
@@ -18,4 +18,10 @@ class post_create(CreateView):
     model= Post
     template_name = 'post_new.html'
     fields = '__all__' 
+    success_url = reverse_lazy('home')
+
+class post_edit(UpdateView):
+    model = Post
+    template_name = 'post_edit.html'
+    fields = ['title', 'content']
     success_url = reverse_lazy('home')

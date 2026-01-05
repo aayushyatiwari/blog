@@ -5,6 +5,7 @@ from . import views
 
 
 urlpatterns = [
+    path('post/<slug:slug>/edit', views.post_edit.as_view(), name='post_edit'),
     path('new/', views.post_create.as_view(), name='post_new'),
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
